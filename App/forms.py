@@ -8,8 +8,8 @@ class AgregarUsuario(forms.Form):
     nombre=forms.CharField(widget=forms.TextInput(),label="Nombre")
     apellido=forms.CharField(widget=forms.TextInput(),label="Apellido")
     fecha=forms.DateField(widget=forms.SelectDateWidget(years=range(1900,2000)),label="Fecha de Nacimiento")
-    region=forms.ChoiceField(choices=(('1', 'REGION METROPOLITANA',),),label="Región")
-    ciudad=forms.ChoiceField(choices=(('1', 'Maipu',),),label="Ciudad")
+    region=forms.ChoiceField(choices=(('1', 'Arica'),('2', 'Tarapacá'),('3', 'Antofagasta'),('4', 'Atacama'),('5', 'Coquimbo'),('6', 'Valparaíso'),('7', 'Región Metropolitana'),('8', 'Bernardo OHiggins'),('9', 'Maule'),('10', 'Ñuble'),('11', 'Biobío'),('12', 'Araucanía'),('13', 'Los Lagos')),label="Región")
+    ciudad=forms.ChoiceField(choices=(('1', 'Santiago',),),label="Ciudad")
     vivienda=forms.ChoiceField(choices=(('Casa con Patio Grande', 'Casa con Patio Grande'),('Casa con Patio Pequeño', 'Casa con Patio Pequeño'),('Casa sin Patio', 'Casa sin Patio'),('Departamento', 'Departamento')),label="Vivienda")
     rol=forms.ChoiceField(choices=(('Normal', 'Normal'),('Admin','Admin'),),label="Rol del Usuario")
 
@@ -21,8 +21,8 @@ class RegUsuario(forms.Form):
     nombre=forms.CharField(widget=forms.TextInput(),label="Nombre")
     apellido=forms.CharField(widget=forms.TextInput(),label="Apellido")
     fecha=forms.DateField(widget=forms.SelectDateWidget(years=range(1900,2000)),label="Fecha de Nacimiento")
-    region=forms.ChoiceField(choices=(('1', 'REGION METROPOLITANA',),),label="Región")
-    ciudad=forms.ChoiceField(choices=(('1', 'Maipu',),),label="Ciudad")
+    region=forms.ChoiceField(choices=(('1', 'Arica'),('2', 'Tarapacá'),('3', 'Antofagasta'),('4', 'Atacama'),('5', 'Coquimbo'),('6', 'Valparaíso'),('7', 'Región Metropolitana'),('8', 'Bernardo OHiggins'),('9', 'Maule'),('10', 'Ñuble'),('11', 'Biobío'),('12', 'Araucanía'),('13', 'Los Lagos'),),label="Región")
+    ciudad=forms.ChoiceField(choices=(('1', 'Santiago',),),label="Ciudad")
     vivienda=forms.ChoiceField(choices=(('Casa con Patio Grande', 'Casa con Patio Grande'),('Casa con Patio Pequeño', 'Casa con Patio Pequeño'),('Casa sin Patio', 'Casa sin Patio'),('Departamento', 'Departamento')),label="Vivienda")
 
 class LoginFormulario(forms.Form):
