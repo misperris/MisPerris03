@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App.apps.AppConfig',
+    'nuevaApp',
+]
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
