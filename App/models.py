@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -12,7 +13,10 @@ class Usuario(models.Model):
     vivienda=models.CharField(max_length=20)
     rol=models.CharField(max_length=10, default="Normal")
 
-    
+    class Meta:
+        ordering = ('user',)
+
+
 class Mascota(models.Model):
     id=models.AutoField(primary_key=True)
     nombre=models.CharField(max_length=20)
@@ -21,4 +25,5 @@ class Mascota(models.Model):
     estado=models.CharField(max_length=20)
     pic=models.ImageField(upload_to='db_fotos', blank=True, null=True)
 
-    
+    class Meta:
+        ordering = ('id',)
