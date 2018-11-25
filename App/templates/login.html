@@ -5,6 +5,7 @@
     <br>
     {% csrf_token %}
     {{form}}
+    <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login con facebook</a>
     <br>
     <br>
     <button type="submit">Ingresar</button>
