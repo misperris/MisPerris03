@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'nuevaApp',
     'rest_framework',
     'social_django',
+
 ]
 
 
@@ -173,3 +174,5 @@ SOCIAL_AUTH_FACEBOOK_IGNORE_DEFAULT_SCOPE = True
 SOCIAL_AUTH_FACEBOOK_SCOPE = [
     'email'
 ]
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'App/static/js', 'serviceworker.js')

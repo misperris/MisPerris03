@@ -23,7 +23,7 @@ urlpatterns = [
     path('',include("App.urls")),
     path('api-auth/', include('rest_framework.urls')),
     path('', include('social_django.urls', namespace='social')),
-
+ 
     
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
