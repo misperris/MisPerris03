@@ -2,6 +2,7 @@
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+from .models import Usuario, Mascota
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:

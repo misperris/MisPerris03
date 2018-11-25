@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Usuario(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     nombre=models.CharField(max_length=20)
@@ -11,6 +12,7 @@ class Usuario(models.Model):
     vivienda=models.CharField(max_length=20)
     rol=models.CharField(max_length=10, default="Normal")
 
+    
 class Mascota(models.Model):
     id=models.AutoField(primary_key=True)
     nombre=models.CharField(max_length=20)

@@ -11,6 +11,26 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
+from .serializers import UsuarioSerializer, MascotaSerializer
+from rest_framework import generics
+
+class UsuarioList(generics.ListCreateAPIView):
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer
+
+class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer
+
+class MascotaList(generics.ListCreateAPIView):
+    queryset = Mascota.objects.all()
+    serializer_class = MascotaSerializer
+
+class MascotaDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Mascota.objects.all()
+    serializer_class = MascotaSerializer
+
+
 
 def index(request):
     lista = Mascota.objects.all()
