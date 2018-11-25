@@ -13,11 +13,6 @@ class AgregarUsuario(forms.Form):
     vivienda=forms.ChoiceField(choices=(('Casa con Patio Grande', 'Casa con Patio Grande'),('Casa con Patio Pequeño', 'Casa con Patio Pequeño'),('Casa sin Patio', 'Casa sin Patio'),('Departamento', 'Departamento')),label="Vivienda")
     rol=forms.ChoiceField(choices=(('Normal', 'Normal'),('Admin','Admin'),),label="Rol del Usuario")
 
-
-
-
-
-
 class RegUsuario(forms.Form):
     correo=forms.EmailField(widget=forms.EmailInput(),label="Email")
     username=forms.CharField(widget=forms.TextInput(),label="Nombre de Usuario")

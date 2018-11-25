@@ -39,11 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'App.apps.AppConfig',
     'nuevaApp',
-]
-
-THIRD_PARTY_APPS = [
     'rest_framework',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,3 +133,11 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER='misperrisproyecto@gmail.com'
 EMAIL_HOST_PASSWORD='MisPerris01'
 EMAIL_PORT=587
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
