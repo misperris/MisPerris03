@@ -4,7 +4,7 @@
 
 <meta charset="utf-8">
 <script src="{% static 'js/jquery.js' %}"></script>
-<script src="{% static 'js/jquery.min.js' %}"></script>
+
 <script>$(document).ready(function(){$(".bxslider").bxSlider()})</script>
 <script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
@@ -14,7 +14,10 @@
 <link rel="stylesheet" href="{% static 'node_modules/@fortawesome/fontawesome-free/css/all.css' %}">
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="{% static 'js/region.js' %}"></script>
-<link rel="manifest" href="{% static 'json/manifest.json' %}">
+ <link rel="manifest" href="{% static 'manifest.json' %}">
+
+
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -172,6 +175,11 @@
     <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
 
 
+    <div class="loader">
+        <svg viewBox="0 0 32 32" width="32" height="32">
+          <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+        </svg>
+      </div>
 
 {% endblock %}
 {% block footer %}

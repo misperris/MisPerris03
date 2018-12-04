@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'nuevaApp',
     'rest_framework',
     'social_django',
-
+    
 ]
 
 
@@ -129,7 +129,8 @@ MEDIA_URL='/media/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/App/static/'
+STATIC_ROOT = '/App/static/' 
 MEDIA_URL = '/media/'
 
 EMAIL_USE_SSL=False
@@ -175,4 +176,4 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = [
     'email'
 ]
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'App/static/js', 'serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'App/static/js', 'sw.js')

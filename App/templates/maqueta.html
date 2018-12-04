@@ -1,8 +1,26 @@
 {% load staticfiles %}
 <html>
     <head>
+
         <link rel="stylesheet" href="{% static 'css/maqueta.css' %}">
         <script src="{% static 'js/prefix.js' %}" type="test/javascript"></script>
+        <link rel="manifest" href="{% static 'manifest.json' %}">
+
+        <!--Pintar barra de navegacion del navegador-->
+        <meta name="theme-color" content="#F0DB4F">
+        <!--Etiquetas que muestran que el sitio está optimizado para mobiles-->
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <!--meta etiquetas para dispositivos de apple-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!--Link que llama al favicon (icono que aparece al lado del nombre del sitio en las ventanas del navegador)-->
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/ProgramadorFitness.png' %}">
+        <!--Logo de la aplicación del celular-->
+        <link rel="apple-touch-icon" href="{% static 'img/ProgramadorFitness.png' %}">
+        <!--Logo cuando se inicia la aplicacion en el celular-->
+        <link rel="apple-touch-startup-image" href="{% static 'img/ProgramadorFitness.png' %}">
+
     </head>
     <body>
             <div class=contenedor>
